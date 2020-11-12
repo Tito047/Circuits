@@ -1,0 +1,19 @@
+
+FOR TRANSIENT ANALYSIS: 
+tran <tstep> <tstop>
+tran <tstep> <tstop> <tstart>
+tran <tstep> <tstop> <tstart> <tmax>
+
+FOR DC SWEEP ANALYSIS:
+dc <Source-Name> <Vstart> <Vstop> <Vincr>
+
+GENERATING NETLIST FROM SCH:
+gnetlist -g spice-sdb -o <filename.net> <filename.sch>
+
+AC value sin(<phase> <Amplitude> <frequency>)
+
+AUTOMATING SCRIPTS:
+1. Create control part 
+.control
+<write the desired operation transient , plotting vectors>
+.endc
